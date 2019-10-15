@@ -5,6 +5,8 @@ require 'selenium-webdriver'
 
 class Battle < Sinatra::Base
 
+  enable :sessions
+
   get '/' do
     erb :index
   end
@@ -14,10 +16,15 @@ class Battle < Sinatra::Base
   end
 
   post '/names' do
-    @player_one = params[:player_one]
-    @player_two = params[:player_two]
-    erb :play
+    session[:player_one] = params[:player_one]
+    session[:player_two] = params[:player_two]
+    redirect '/play'
   end
 
+  get '/play' do
+    @player_one = session[:player_one]
+    @player_two = session[:player_two]
+    erb :play
+  end
 
 end

@@ -1,13 +1,12 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Student/projects/course/intro_to_the_web/battle-V-L/spec/battle_spec.rb": [
+      "/Users/Student/Projects/battle-web/battle-V-L/spec/battle_spec.rb": [
 
       ],
-      "/Users/Student/projects/course/intro_to_the_web/battle-V-L/spec/features/names_input_spec.rb": [
+      "/Users/Student/Projects/battle-web/battle-V-L/spec/features/hitpoints_p2_spec.rb": [
         1,
-        1,
-        1,
+        null,
         1,
         1,
         1,
@@ -15,7 +14,15 @@
         null,
         null
       ],
-      "/Users/Student/projects/course/intro_to_the_web/battle-V-L/spec/features/testing_infrastructure_spec.rb": [
+      "/Users/Student/Projects/battle-web/battle-V-L/spec/features/names_input_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Student/Projects/battle-web/battle-V-L/spec/features/testing_infrastructure_spec.rb": [
         1,
         1,
         1,
@@ -24,6 +31,6 @@
         null
       ]
     },
-    "timestamp": 1571150724
+    "timestamp": 1571154457
   }
 }
