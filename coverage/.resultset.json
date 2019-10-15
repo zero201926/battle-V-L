@@ -1,0 +1,29 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/Student/projects/course/intro_to_the_web/battle-V-L/spec/battle_spec.rb": [
+
+      ],
+      "/Users/Student/projects/course/intro_to_the_web/battle-V-L/spec/features/names_input_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Student/projects/course/intro_to_the_web/battle-V-L/spec/features/testing_infrastructure_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1571150724
+  }
+}
