@@ -2,9 +2,9 @@ require 'sinatra/base'
 require 'shotgun'
 require 'capybara'
 require 'selenium-webdriver'
-require 'player'
-require './lib/game'
-require './lib/player'
+require_relative 'player'
+require_relative 'game'
+
 
 class Battle < Sinatra::Base
 
@@ -34,17 +34,36 @@ class Battle < Sinatra::Base
     erb :play
   end
 
+  post '/attack' do
+    # Attack.run($game.opponent_of($game.current_turn))
+    if $game.game_over?
+      redirect '/game-over'
+    else
+      redirect '/attack'
+    end
+  end
+
   get '/attack' do
     @game = $game
-    @game.attack(@game.player_2)
+    # if @game.current_turn == @game.player_1
+    #   @game.attack(@game.player_2)
+    # else
+    #   @game.attack(@game.player_1)
+    # end
+    @game.attack(@game.opponent_of(@game.current_turn))
     @game.switch_turns
     erb :attack
   end
 
   post '/switch-turns' do
-     $game.switch_turns
-     redirect('/play')
-   end
+     # $game.switch_turns
+    redirect('/play')
+  end
+
+  get '/game-over' do
+    @game = $game
+    erb :game_over
+  end
    # start the server if ruby file executed directly
    run! if app_file == $0
 end
