@@ -13,13 +13,13 @@ feature 'Attacking a player' do
     expect(page).to have_content 'Luke: 50HP'
   end
 ################################################################
-  scenario 'player 2 attacks player 1' do
-    sign_in_and_play
-    click_button 'Attack'
-    click_button 'OK'
-    click_button "Attack"
-    expect(page).to have_content 'Luke attacks Vikash.'
-  end
+  # scenario 'player 2 attacks player 1' do
+  #   sign_in_and_play
+  #   click_button 'Attack'
+  #   click_button 'OK'
+  #   click_button "Attack"
+  #   expect(page).to have_content 'Luke attacks Vikash.'
+  # end
   #
   # scenario 'player 2 attacks player 1 by 10' do
   #   sign_in_and_play
